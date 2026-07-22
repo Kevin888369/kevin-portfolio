@@ -1,0 +1,81 @@
+.about__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.about__content {
+  max-width: 65ch;
+}
+
+/* ── Bio as "file content" ── */
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-ink-2);
+}
+
+.about__body p {
+  margin: 0;
+}
+
+/* ── Stats as key-value terminal output ── */
+.about__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.about__stat-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.about__stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+@media (max-width: 60rem) {
+  .about__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .about__stats {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+  .about__stats {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .about__stat-number { font-size: var(--text-xl); }
+}

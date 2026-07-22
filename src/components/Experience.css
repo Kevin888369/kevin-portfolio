@@ -1,0 +1,166 @@
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ── Terminal log entry style ── */
+.experience__role {
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  background: var(--color-paper-2);
+  transition: border-color var(--dur-short) var(--ease-out);
+}
+
+.experience__role:hover {
+  border-color: var(--color-rule-thick);
+}
+
+.experience__role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.experience__role-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.experience__company {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.experience__company-arrow {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--text-sm);
+}
+
+.experience__role-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experience__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+  white-space: nowrap;
+  padding: var(--space-2xs) var(--space-sm);
+  background: var(--color-paper-3);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+/* ── Projects as nested log entries ── */
+.experience__projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.experience__project {
+  padding: var(--space-sm) var(--space-md);
+  border-left: 2px solid var(--color-accent-soft);
+  transition: border-color var(--dur-short) var(--ease-out);
+}
+
+.experience__role:hover .experience__project {
+  border-left-color: var(--color-accent-muted);
+}
+
+.experience__project-name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.experience__link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-2);
+  padding: 2px 6px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--dur-micro) var(--ease-out);
+  line-height: 1;
+}
+
+.experience__link-badge:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent-muted);
+  background: var(--color-accent-soft);
+}
+
+.experience__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.experience__highlight {
+  position: relative;
+  padding-left: var(--space-md);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.experience__highlight::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 40rem) {
+  .experience__role {
+    padding: var(--space-md);
+  }
+
+  .experience__role-header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .experience__company { font-size: var(--text-md); }
+
+  .experience__project {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .experience__highlight { font-size: var(--text-xs); }
+}

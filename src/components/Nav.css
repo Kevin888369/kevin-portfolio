@@ -1,0 +1,95 @@
+.nav-term {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-sm) clamp(1.25rem, 4vw, 2.5rem);
+  background: oklch(12% 0.006 150 / 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-rule);
+  transition: border-color var(--dur-short) var(--ease-out),
+              background var(--dur-short) var(--ease-out);
+}
+
+.nav-term--scrolled {
+  background: oklch(12% 0.006 150 / 0.94);
+  border-color: var(--color-rule-thick);
+}
+
+.nav-term__line {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.nav-term__prompt {
+  color: var(--color-accent);
+  margin-right: 0.5ch;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.nav-term__brand {
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-right: 1ch;
+  flex-shrink: 0;
+}
+
+.nav-term__link {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  padding: var(--space-3xs) var(--space-xs);
+  transition: color var(--dur-micro) var(--ease-out),
+              text-decoration-color var(--dur-micro) var(--ease-out);
+  white-space: nowrap;
+}
+
+.nav-term__link:hover,
+.nav-term__link--active {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-accent-muted);
+}
+
+.nav-term__caret {
+  display: inline-block;
+  width: 1ch;
+  color: var(--color-accent);
+  animation: blink-caret 1.05s steps(2) infinite;
+  margin-left: 0.5ch;
+}
+
+@keyframes blink-caret {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-term__caret { animation: none; opacity: 1; }
+}
+
+@media (max-width: 40rem) {
+  .nav-term {
+    padding: var(--space-xs) clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .nav-term__line {
+    font-size: 0.7rem;
+  }
+
+  .nav-term__brand-text { display: none; }
+
+  .nav-term__link {
+    padding: var(--space-3xs) 4px;
+  }
+}

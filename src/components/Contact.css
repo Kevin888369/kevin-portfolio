@@ -1,0 +1,175 @@
+/* ── Contact section ── */
+.contact {
+  padding-block: 0;
+}
+
+.contact__inner {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: var(--space-4xl) clamp(1.25rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.contact__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--color-ink);
+  margin-bottom: var(--space-md);
+}
+
+.contact__text {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.65;
+  max-width: 50ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-2xl);
+}
+
+.contact__channels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.contact__row {
+  display: flex;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.contact__row .contact__channel {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact__row--single {
+  justify-content: center;
+}
+
+.contact__row--single .contact__channel {
+  flex: 0 1 calc(50% - var(--space-md) / 2);
+}
+
+.contact__channel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  background: var(--color-paper-2);
+  text-decoration: none;
+  transition: border-color var(--dur-short) var(--ease-out),
+              background var(--dur-short) var(--ease-out);
+}
+
+.contact__channel:hover {
+  border-color: var(--color-accent-muted);
+  background: var(--color-paper-3);
+}
+
+.contact__channel:active {
+  transform: translateY(1px);
+  border-color: var(--color-rule);
+}
+
+.contact__channel svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+}
+
+.contact__channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contact__channel-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+  letter-spacing: 0.04em;
+}
+
+.contact__channel-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink);
+  word-break: break-all;
+}
+
+/* ── Ft4: Dense colophon footer ── */
+.contact__footer {
+  border-top: 1px solid var(--color-rule);
+  padding: var(--space-xl) clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.contact__colophon {
+  max-width: 1200px;
+  margin-inline: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact__colophon a {
+  color: var(--color-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-rule);
+  transition: color var(--dur-micro) var(--ease-out),
+              text-decoration-color var(--dur-micro) var(--ease-out);
+}
+
+.contact__colophon a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent-muted);
+}
+
+.contact__colophon-sep {
+  margin-inline: var(--space-xs);
+  opacity: 0.4;
+}
+
+@media (max-width: 40rem) {
+  .contact__inner {
+    padding: var(--space-2xl) clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .contact__heading { font-size: var(--text-2xl); }
+
+  .contact__channels {
+    max-width: 100%;
+  }
+
+  .contact__row {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact__row--single .contact__channel {
+    flex: 1;
+  }
+
+  .contact__channel {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .contact__colophon {
+    font-size: 0.6rem;
+    line-height: 1.6;
+  }
+}

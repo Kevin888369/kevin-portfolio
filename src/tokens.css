@@ -1,0 +1,83 @@
+/* Hallmark · genre: atmospheric · macrostructure: Bento Grid · theme: Terminal
+ * enrichment: none · nav: N8 Terminal command · footer: Ft4 Dense colophon
+ * pre-emit critique: P5 H4 E4 S4 R4 V4
+ */
+
+:root {
+  /* ── Colour: Terminal theme ──
+   * Paper band: dark (<30%) · Display style: Space Grotesk (grotesk-sans) + JetBrains Mono (mono)
+   * Accent hue: phosphor green (145°)
+   */
+  --color-paper:      oklch(12% 0.006 150);
+  --color-paper-2:    oklch(16% 0.008 148);
+  --color-paper-3:    oklch(20% 0.01  148);
+  --color-rule:       oklch(26% 0.012 148);
+  --color-rule-thick: oklch(32% 0.015 148);
+  --color-neutral:    oklch(48% 0.02  152);
+  --color-muted:      oklch(62% 0.03  152);
+  --color-ink:        oklch(86% 0.01  148);
+  --color-ink-2:      oklch(74% 0.02  148);
+  --color-accent:     oklch(70% 0.22  145);
+  --color-accent-soft:  oklch(70% 0.22 145 / 0.12);
+  --color-accent-muted: oklch(70% 0.12 145 / 0.5);
+  --color-accent-ink:   oklch(12% 0.02  145);
+  --color-focus:     oklch(65% 0.22  145);
+  --color-graphite:  oklch(20% 0.01  150);
+  --color-success:   oklch(62% 0.16  148);
+  --color-error:     oklch(58% 0.18   30);
+
+  /* ── Typography ──
+   * 2+1 discipline: Space Grotesk (display) + Inter (body) + JetBrains Mono (outlier)
+   */
+  --font-display:  "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:     "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:     "JetBrains Mono", ui-monospace, monospace;
+
+  --text-xs:   0.64rem;
+  --text-sm:   0.8rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5625rem;
+  --text-xl:   1.9531rem;
+  --text-2xl:  2.4414rem;
+  --text-3xl:  3.0518rem;
+  --text-4xl:  3.8147rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-s: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+
+  /* ── Spacing (4-pt scale) ── */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* ── Radii ── */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 7px;
+  --radius-xl: 10px;
+  --radius-full: 9999px;
+
+  /* ── Motion ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7,  0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long:  420ms;
+
+  /* ── Z-index scale ── */
+  --z-base:     1;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+}
