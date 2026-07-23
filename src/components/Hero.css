@@ -354,13 +354,13 @@
 
   .hero__links {
     flex-direction: column;
-    width: 100%;
-    max-width: 280px;
+    gap: var(--space-md);
   }
 
   .hero__link {
     width: 100%;
     justify-content: center;
+    box-sizing: border-box;
   }
 }
 
